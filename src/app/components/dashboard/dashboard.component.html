@@ -1,0 +1,9 @@
+<h1>Dashboard</h1>
+<ul>
+  @for (agent of store.agents(); track agent.id) {
+  <li>
+    <a [routerLink]="['/agent', agent.id]">{{ agent.name }} - {{ agent.id }}</a>
+  </li>
+  }
+</ul>
+<a routerLink="/calendar">Voir le calendrier</a>
